@@ -3,3 +3,14 @@
   background-color: bisque;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+
+img {
+  display: flex;
+  width: 20%;
+  height: auto;
+  border-radius: 10px;
+}
+
+img:hover {
+  scale: 105%;
+}
