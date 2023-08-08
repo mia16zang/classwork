@@ -1,0 +1,28 @@
+body {
+  display: flex;
+}
+
+#items {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px;
+}
+
+.item button {
+  flex-direction: column;
+  background-color: lavender;
+  padding: 10px 20px;
+  border: none;
+  margin: 20px;
+  border-radius: 10px;
+  transition: scale 0.5s;
+}
+
+.item button:hover {
+  background-color: rgb(193, 156, 228);
+  scale: 115%;
+}
