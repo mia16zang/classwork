@@ -1,0 +1,87 @@
+/* Your CSS goes here --------------------- */
+/* Basic layout styles */
+#imageSelect {
+  margin: 10px;
+}
+#primary-title {
+  margin: 10px;
+}
+
+#secondary-title {
+  margin: 10px;
+}
+
+#font-family {
+  margin: 10px;
+}
+
+#font-color {
+  margin: 10px;
+}
+
+#font-size {
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+#text-stroke {
+  margin: 10px;
+}
+
+#input {
+  z-index: 99;
+  padding: 20px;
+  background-color: rgb(47, 47, 47);
+  color: aliceblue;
+}
+
+#output {
+  background-color: rgb(47, 47, 47);
+}
+header {
+  display: flex;
+  height: 40px;
+  background-color: rgb(47, 47, 47);
+  color: rgb(251, 250, 247);
+  box-shadow: 0 3px 3px #444444;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+#openPopup {
+  background-color: rgb(218, 218, 218);
+  color: rgb(27, 27, 27);
+  border-radius: 4px;
+  font-size: 24px;
+  border: none;
+}
+
+#save-img {
+  z-index: 200;
+  background-color: rgb(90, 100, 125);
+  color: aliceblue;
+  font-weight: 600;
+}
+
+#popup {
+  z-index: 999;
+  border-radius: 10px;
+}
+
+input {
+  border-radius: 6px;
+}
+
+select {
+  border-radius: 6px;
+  padding: 2px;
+}
+
+fieldset {
+  border-radius: 10px;
+  padding: 10px;
+  padding-bottom: 2dvh;
+}

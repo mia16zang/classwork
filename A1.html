@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- Insert relevant content inside the following meta tags-->
+    <meta name="author" content="Author Name" />
+    <meta name="description" content="This is a Good Morning Message Maker" />
+    <meta property="og:title" content="Good Morning Message Maker" />
+    <meta
+      property="og:description"
+      content="This is a Good Morning Message Maker"
+    />
+
+    <title>Good Morning Message Maker</title>
+
+    <!-- No need to edit this-->
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+
+    <!-- Links to boilerplate CSS and JS files -- DO NOT CHANGE or EDIT THESE!!! -->
+    <link href="template.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+    <script src="html2canvas.js" defer></script>
+
+    <!-- Links to YOUR CSS and JS files -->
+    <link href="A1.css" rel="stylesheet" />
+    <script src="A1.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <!--DO NOT EDIT THIS -->
+      <button id="openPopup" onclick="showPopup()">?</button>
+
+      <!--Insert your Names after the dash -->
+      <h1>Good Morning Message Maker</h1>
+    </header>
+    <main>
+      <section id="input">
+        <!-- Markup for your inputs and controls go inside this section -->
+        <label for="imageSelect">Choose Image</label>
+        <select name="dropdown" id="imageSelect" onchange="choosePic()">
+          <option value="images\flowers.jpeg">Flowers</option>
+          <option value="images\still-life.jpeg">Still-Life</option>
+          <option value="images\sunrise.jpeg">Sunrise</option>
+        </select>
+        <br />
+        <label for="primary-title">Primary Title:</label>
+        <input type="text" id="primary-title" name="primary-title" /><br />
+
+        <label for="secondary-title">Secondary Title:</label>
+        <input type="text" id="secondary-title" name="secondary-title" /><br />
+
+        <fieldset>
+          <legend>Font Family:</legend>
+          <label
+            ><input
+              type="radio"
+              name="font-family"
+              value="cursive"
+            />Cursive</label
+          ><br />
+          <label
+            ><input type="radio" name="font-family" value="serif" />Serif</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="font-family"
+              value="sans-serif"
+            />Sans-Serif</label
+          >
+        </fieldset>
+        <br />
+
+        <label for="font-color">Font Color:</label>
+        <select id="font-color" name="font-color">
+          <option value="black">Black</option>
+          <option value="red">Red</option>
+          <option value="yellow">Yellow</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+          <option value="white">White</option>
+          <option value="cyan">Cyan</option>
+          <option value="pink">Pink</option>
+          <option value="purple">Purple</option>
+          <!-- Add more color options here -->
+        </select>
+        <br />
+
+        <label for="font-size">Font Size:</label>
+        <input
+          type="range"
+          id="font-size"
+          name="font-size"
+          min="12"
+          max="48"
+          step="1"
+        /><br />
+
+        <label for="text-stroke">Text Stroke (px):</label>
+        <input
+          type="number"
+          id="text-stroke"
+          name="text-stroke"
+          min="0"
+          step="100"
+        />
+      </section>
+
+      <!-- Button to Save Image | DO NOT EDIT THIS -->
+      <button id="save-img">Save Image</button>
+
+      <section id="output">
+        <div id="output-canvas">
+          <!-- Markup for your image and texts go inside this div -->
+          <!-- Use the ID "text-1" for Text 1 -->
+          <!-- Use the ID "text-2" for Text 2 -->
+          <div id="output-canvas">
+            <img src="" alt="" id="canvas-image" />
+            <h2 id="text-1">Primary Title</h2>
+            <h2 id="text-2">Secondary Title</h2>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--DO NOT EDIT THIS DIV -->
+    <div id="popupCover" onclick="hidePopup()"></div>
+
+    <!-- 
+        Once you are done with your assignment, replace the instructions text inside the div with id "popup" with the following text: This tool was programmed by [insert names], as part of a unit titled 'Coding for the Web', facilitated during the 2023/24 odd semester at Srishti Manipal Institute. 
+    -->
+    <div id="popup">
+      <p>
+        This tool was programmed by Manya Mankad, as part of a unit titled
+        'Coding for the Web', facilitated during the 2023/24 odd semester at
+        Srishti Manipal Institute.
+      </p>
+    </div>
+  </body>
+</html>
