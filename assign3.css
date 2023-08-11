@@ -1,0 +1,26 @@
+.color-box {
+  width: 200px;
+  height: 200px;
+  background-color: gray;
+  margin-top: 20px;
+}
+
+#button {
+  z-index: 999;
+  position: absolute;
+  border-radius: 10px;
+  border: none;
+  background-color: lavender;
+  top: 60px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: scale 0.4s;
+  right: 40px;
+  top: 20px;
+  box-shadow: 5px 8px #000000;
+}
+
+#button:hover {
+  background-color: rgb(193, 156, 228);
+  scale: 115%;
+}
