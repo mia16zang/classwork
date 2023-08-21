@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    
+    <meta name="author" content="Expanded Metrics">
+    <meta name="description" content="">
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+    
+    <title>D6.E1&thinsp;·&thinsp;CSS Responsive</title>
+    
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website"/>
+
+    <link href="defaults+font-face.css" type="text/css" rel="stylesheet">
+    <link href="assign5.css" rel="stylesheet">
+
+    <script src="assign5script.js"  defer></script> 
+    <script src="assign5.js"></script>
+
+
+</head>
+    
+<body onload="loadPopupState()">
+
+    <aside>NOTE ON MARKUP & DEFAULT STYLING:
+        <ul>
+            <li>All sections have the default "display" attributes.</li>
+            <li>All sections have coloured divs within them.</li>
+            <li>All divs have a padding of 10px applied inside them.</li>
+            <li>The base font size on the whole doc is 18px. (set via the html selector in CSS) </li>
+        </ul>
+    </aside>
+    <br><br>
+    
+    <!-- Section 1 -->
+    <section id="s1"> 
+        <h2>SECTION 1</h2>
+        <em>Intro to Media Queries</em>
+        <div>
+            <p>
+                At its simplest, a website is a folder of text files broadcast from a computer to the rest of the world.
+
+                This folder will likely have media too (nice pictures and songs and such).
+                
+                (And it’s likely being broadcast far beyond our world, into outer space and the ethereal realms.)
+                
+                It is continuously illuminating to realize websites are just text files in folders, like any other writing you’d keep on your computer.
+                
+                And too that, beyond this, a webpage is whatever you want it to be.
+                
+                Today, most webpages look the same. They don’t have to.
+                
+                There is no reason for their look beyond convention, false assumptions, and probably a type of soul-tiredness prevalent today.
+                
+                Your webpage can, and should, look however you want.
+                
+                It can, and should, be about anything you want.
+                
+                It does not need to be perfect, or finished, or even good.
+                
+                A webpage, at best, is a space you manifest to hold an idea or dream.
+                
+                It is whatever that means for you.
+            </p>
+
+        </div>
+    
+    </section>
+
+    <!-- Section 2 -->
+    <section id="s2"> 
+        <h2>SECTION 2</h2>
+        <em>The Calc Method</em>
+        <div>
+            <div>You need two tools for making a website: a text editor and a browser.
+            </div>
+            <div>
+                You will use other tools in the future–a server to broadcast your page and a domain name in which to find it–but these are topics for a future zine.
+                <br>
+                <br>
+                And really, for the creation of your website you just need a text editor. The browser is only so you can marvel at your work.
+            </div>
+
+        </div>      
+    </section>
+        
+
+    <!-- Section 4 -->
+    <section id="s3"> 
+        <h2>SECTION 3</h2>
+        <em>The Flexible Box Layout module - 1</em>
+        <div>
+            <div>
+                The browser reads you quite literally and doesn’t pick up on subtle clues like linebreaks. 
+            </div>
+            <div>
+                It saw text and, to please you, displayed it as quickly and efficiently as it could.
+            </div>
+            <div>
+                If you want your text to be structured, you have to be explicit with that structure, using a language the browser understands.
+            </div>
+            <div>
+                Text of the future. Hypertext. I’m talking Hypertext Markup Language, baybee! Good ol’ HTML.
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 4 -->
+    <section id="s4"> 
+        <h2>SECTION 4</h2>
+        <em>The Flexible Box Layout module - 2</em>
+        <div>
+            <div>
+                By text editor, I mean a computer program that lets you fill a blank page as simply as possible. Programs like ms word and google docs won’t work, as they’re deceptively complex. They add a bunch of hidden chaff to your words that becomes visible gibberish in a browser.
+            </div>
+            <div>
+                You want to be able to read and edit the text exactly as it is, without flourish. This unadorned text is called “plain text” and you want a “plain text editor”.
+            </div>
+            <div>
+                Ultimately, your text editor is a deeply personal choice, like picking your preferred pen or notebook. When you find the one right for you, it can be like discovering both a new way of speaking and a long-lost friend.
+            </div>
+        </div>
+    </section>
+
+    <section id="s5"> 
+        <h2>SECTION 5</h2>
+        <em>More Responsive Stuff</em>
+        <div>
+            <span>ONE</span>
+            <span>TWO</span>
+            <span>THREE</span>
+            <span>FOUR</span>
+            <span>FIVE</span>
+            <span>SIX</span>
+            <span>SEVEN</span>
+            <span>EIGHT</span>
+        </div>
+        <br>
+        <button id="button" onclick="divShow()">This is a Button</button>
+        <div id="box">
+            <ul>
+                <li>ONE</li>
+                <li>TWO</li>
+                <li>TWO</li>
+                <li>THREE</li>
+                <li>FOUR</li>
+                <li>FIVE</li>
+                <li>SIX</li>
+                <li>SEVEN</li>
+                <li>EIGHT</li>
+            </ul>
+        </div>
+    </section>
+    
+    
+
+
+
+
+
+    <!-- POPUP -->
+    <button id="openPopup" onclick="showPopup()">?</button>
+    <div id="popupCover" onclick="hidePopup()"></div>
+
+    <div id="popup">
+        
+            Edit the file named ‘CSS_TO_EDIT.css’ (in the same root folder as this index.html file).<br>
+            <br>
+            Do not edit the markup or add classnames to the HTML file!
+            
+            <hr>
+            There are X sections in this HTML document, and in each there's a set of coloured div elements. Follow the section-wise instructions for editing their attributes:
+            
+            <hr>
+            The following two breakpoints are to be used throughout the exercise:
+            <li>Breakpoint 1: 1024 px</li>
+            <li>Breakpoint 2: 600 px</li>
+
+
+        <hr>
+        <p><u>Section 1:</u>
+        <ol>
+            <li> The div has a default background colour set on it. Use media queries to change the colours for both the breakpoints. 
+            </li>            
+            <li>The div has a three-column layout for its text (set via the 'column-count' property). Change it to a two-column layout for the first breakpoint, and a single-column layout for the second breakpoint</li>
+            <li>Without editing the base font size set via the 'html' selector, change the font size of the text only on this section's div to be 16px on the first breakpoint and 14px on the second breakpoint</li>
+        </ol>
+        </p>
+
+        <hr>
+        <p><u>Section 2:</u><br>
+            <ol>
+                <li>This section has a (parent) div, inside which are two (children) divs. Using the calc() method and height property, redesign this section so that the parent div takes up the 70% height of the viewport, the first child div has a fixed height of 40px, and the second child div takes up the remaining space of the div</li>   
+                <li> Set different background colours on both the children divs. Now, similar to section 1, change their colours for both breakpoints. </li>
+            </ol>            
+
+        </p>
+        <hr>
+
+        <p><u>Section 3:</u><br>
+            <ol>
+                <li>This section has a parent div, inside which there are 4 children divs (boxes). The children have the default display property and a width of 400px set on each of them. Using the flexbox property, make the boxes appear in a single line next to each other (4 column layout). </li>
+                <li>Adjust the widths of the boxes so they all take up equal space and fill the parent div. There should be a spacing of 10px between the boxes.</li>
+                <li>Similar to section 1 and 2, change the colours of the boxes for both the breakpoints</li>
+                <li>Change the 4 column layout into a 2 column layout for the first breakpoint</li>
+                <li>Without removing the flex property set on the parent/container, change the layout into a single-column layout (all the boxes are stacked on top of each other) for the second breakpoint</li>
+            </ol>
+        </p>
+        <hr>
+        
+        <p><u>Section 4:</u><br>
+            <ol>
+                <li>This section has a parent div with 3 children divs inside it. Using flexbox change the layout into a three column layout. Without using margin or gap properties, make sure that the divs are evenly spaced. The first div's left edge should align with the container's left edge and the third div's right edge should align with the right edge of the container's right edge</li>
+                <li>The divs are to be aligned centrally along the horizontal axis</li>
+                <li> Make it into a single column layout only for the second breakpoint. For this breakpoint, the divs need to be aligned centrally along the vertical axis</li>
+            </ol>
+        </p>
+        <hr>
+
+        <p><u>Section 5:</u><br>
+            <ol>
+                <li>This section has a visible div. This section also has a button and another div (with the id 'box'), both of which are not visible by default. </li>
+                <li>On the second breakpoint, hide the first div and make the button visible</li>
+                <li> Now add some JavaScript in the SCRIPT_TO_EDIT.js file so that the button can show/hide the second div</li>
+            </ol>
+        </p>
+        <hr>
+
+
+
+</body>    

@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+.navbar a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.section {
+  padding: 50px;
+  height: 100vh;
+}
+
+.header {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  font-family: "helvetica" !important;
+  font-size: larger;
+  font-weight: bolder;
+  color: #005add;
+}

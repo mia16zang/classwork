@@ -1,0 +1,271 @@
+/* BODY AND SECTIONS */
+/* ----------------------------------------------------- */
+/* All body and section styling available here (except for the fonts, which are declared in the defaults+fonts.css). Some properties have already been declared */
+
+body {
+  padding: 40px 10%;
+  background-color: rgb(235, 235, 235);
+}
+
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+section > h2 {
+  text-align: center;
+  line-height: 1;
+  border-bottom: 1px solid black;
+  padding-bottom: 8px;
+}
+
+section > em {
+  display: block;
+  margin: 8px 0;
+  text-align: center;
+}
+
+section > div {
+  padding: 10px;
+}
+
+#s6 > div {
+  background-color: #b298dc;
+}
+#s7 > div {
+  background-color: #bdc696;
+}
+
+/* SECTION 1 */
+/* ----------------------------------------------------- */
+
+#s1 span {
+  background-color: ;
+  mix-blend-mode: ;
+}
+
+#s1 > div > p {
+  margin: 0;
+}
+
+#s1 > div {
+  background-color: lightgoldenrodyellow;
+  column-count: 3;
+}
+
+/* SECTION 2 */
+/* ----------------------------------------------------- */
+
+#s2 > div {
+  background-color: #cdeac0;
+  height: 70vh;
+}
+
+#s2 > div > div {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+#s2 > div :nth-child(1) {
+  height: 40px;
+  background-color: #ff5964;
+}
+
+#s2 > div :nth-child(2) {
+  height: calc(100% - 80px);
+  background-color: #b298dc;
+}
+
+/* SECTION 3 */
+/* ----------------------------------------------------- */
+
+#s3 > div {
+  background-color: #ff5964;
+  display: flex;
+}
+
+#s3 > div > div {
+  background-color: white;
+  margin: 10px 5px;
+  width: calc(100% - 10px);
+}
+
+#s3 > div :nth-child(1) {
+  background-color: #77eed0;
+}
+
+#s3 > div :nth-child(2) {
+  background-color: #9a8faa;
+}
+
+#s3 > div :nth-child(3) {
+  background-color: #08765a;
+}
+
+#s3 > div :nth-child(4) {
+  background-color: #ccff00;
+}
+
+/* SECTION 4 */
+/* ----------------------------------------------------- */
+
+#s4 > div {
+  background-color: #b8f3ff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#s4 > div > div {
+  width: 30%;
+  background-color: white;
+}
+
+/* SECTION 5 */
+/* ----------------------------------------------------- */
+
+#s5 > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#s5 > div > span {
+  background-color: #b298dc;
+  padding: 10px;
+  margin: 10px;
+  flex-grow: 2;
+}
+
+#button {
+  padding: 10px;
+  background-color: #bdc696;
+  font-family: "FT88", monospace;
+  margin: 10px;
+  display: none;
+}
+
+#box {
+  background-color: #b8f3ff;
+  padding: 10px;
+  display: none;
+  visibility: hidden;
+  width: 120px;
+}
+
+#box > ul {
+  margin: 0;
+  padding: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  /*sec 1 */
+  #s1 > div {
+    background-color: aqua;
+    column-count: 2;
+    font-size: 16px;
+  }
+
+  /*sec 2 */
+  #s2 > div :nth-child(1) {
+    height: 40px;
+    background-color: #c0b2b3;
+  }
+
+  #s2 > div :nth-child(2) {
+    height: calc(100% - 80px);
+    background-color: #aa75ff;
+  }
+
+  /*sec 3 */
+  #s3 > div {
+    flex-wrap: wrap;
+  }
+
+  #s3 > div > div {
+    width: calc(50% - 10px);
+  }
+
+  #s3 > div :nth-child(1) {
+    background-color: #77b8ee;
+  }
+
+  #s3 > div :nth-child(2) {
+    background-color: #3ea624;
+  }
+
+  #s3 > div :nth-child(3) {
+    background-color: #766408;
+  }
+
+  #s3 > div :nth-child(4) {
+    background-color: #ff529d;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /*sec 1 */
+  #s1 > div {
+    background-color: rgb(79, 143, 113);
+    column-count: 1;
+    font-size: 14px;
+  }
+  /*sec 2 */
+  #s2 > div :nth-child(1) {
+    height: 40px;
+    background-color: #1caa90;
+  }
+
+  #s2 > div :nth-child(2) {
+    height: calc(100% - 80px);
+    background-color: #a42087;
+  }
+
+  /*sec 3 */
+  #s3 > div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-evenly;
+  }
+
+  #s3 > div > div {
+    width: fit-content;
+  }
+
+  #s3 > div :nth-child(1) {
+    background-color: #acde21;
+  }
+
+  #s3 > div :nth-child(2) {
+    background-color: #bf6273;
+  }
+
+  #s3 > div :nth-child(3) {
+    background-color: #7d54c9;
+  }
+
+  #s3 > div :nth-child(4) {
+    background-color: #b2a8c0;
+  }
+
+  /* sec 4 */
+  #s4 > div {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  #s4 > div > div {
+    width: 100%;
+  }
+
+  /* sec 5 */
+  #s5 > div {
+    visibility: hidden;
+  }
+  #button {
+    display: flex;
+  }
+}

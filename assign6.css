@@ -1,0 +1,31 @@
+div {
+  margin: auto;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+div > button {
+  font-size: 48px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 4px 10px 10px gray;
+  color: #ffffff;
+  margin: 40px;
+  border: none;
+  transition: scale 0.5s;
+}
+
+div > button:hover {
+  cursor: pointer;
+  scale: 115%;
+}
+
+div > button:nth-child(1) {
+  background-color: black;
+}
+
+div > button:nth-child(2) {
+  background-color: #005add;
+}

@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  margin: 0px;
+  background-color: #005add;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar button {
+  justify-content: flex-end;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #005add;
+  font-weight: 600;
+  border: none;
+  box-shadow: 4px 6px 6px rgb(80, 80, 80);
+  margin: 10px;
+  padding: 4px 10px;
+  transition: scale 0.3s;
+  right: 40px;
+}
+
+.navbar button:hover {
+  background-color: black;
+  color: #ffffff;
+  scale: 115%;
+}
+.navbar a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a:hover {
+  background-color: #ffffff;
+  color: #005add;
+  font-weight: bold;
+}
+
+#section1 {
+  margin-top: 80px;
+  margin-bottom: 10px;
+}
+
+.header {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  font-family: "helvetica" !important;
+  font-size: larger;
+  font-weight: bolder;
+  color: #005add;
+}
+
+.main1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-left: 0px;
+  padding: 40px;
+}
+.main1 > img {
+  width: 80%;
+  height: auto;
+}
+
+.main-t-m {
+  background-color: #8c929d;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+  padding: 40px;
+}
+
+.main-m > img {
+  width: 60%;
+  height: auto;
+}
+
+.main-t > img {
+  width: 60%;
+  height: auto;
+}
+
+#section2 {
+  margin-bottom: 10px;
+}
+
+.sched {
+  padding-left: 40px;
+}
+.sched > img {
+  width: 40%;
+  margin: 10px;
+}
+.sched-t {
+  padding-left: 40px;
+}
+.sched-t > img {
+  width: 30%;
+  margin: 10px;
+}
+.sched-m {
+  padding-left: 40px;
+}
+.sched-m > img {
+  width: 20%;
+  margin: 10px;
+}
+
+.bag {
+  padding-left: 40px;
+}
+.bag > img {
+  width: 40%;
+  margin: 10px;
+}
+
+.bag-t {
+  padding-left: 40px;
+}
+.bag-t > img {
+  width: 30%;
+  margin: 10px;
+}
+
+.bag-m {
+  padding-left: 40px;
+}
+.bag-m > img {
+  width: 20%;
+  margin: 10px;
+}
+
+.shop {
+  padding-left: 40px;
+}
+.shop > img {
+  width: 30%;
+  margin: 10px;
+}
+
+.shop-m {
+  padding-left: 40px;
+}
+.shop-m > img {
+  width: 20%;
+  margin: 10px;
+}
+
+#section3 {
+  background-color: #8c929d;
+  padding-left: 40px;
+  margin-bottom: 10px;
+}
+
+#section3 > img {
+  width: 45%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+#section4 {
+  padding-left: 40px;
+  margin-bottom: 10px;
+}
+
+.menu > img:nth-child(1) {
+  width: 33%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.menu > img:nth-child(2) {
+  width: 50%;
+  height: auto;
+  margin-bottom: 10px;
+}

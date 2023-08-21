@@ -1,0 +1,141 @@
+body {
+  background-color: black;
+  margin: 0; /* Reset default margin */
+  padding: 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    yellow,
+    rgb(255, 105, 25),
+    yellow,
+    rgb(255, 105, 25)
+  );
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  z-index: 999;
+}
+
+.logo {
+  margin-right: 20px; /* Add some spacing between elements */
+}
+
+.text {
+  font-size: 32px;
+  margin-right: 20px; /* Add some spacing between elements */
+  color: #ed4c07;
+  -webkit-text-stroke: 2px rgb(0, 0, 0);
+}
+
+.ec {
+  /* Add some spacing between elements */
+  color: #fff;
+  margin-right: 20px;
+}
+
+.ec-text {
+  margin: 0;
+}
+
+.ec-no {
+  margin: 0;
+}
+
+.p {
+  margin: 0;
+  font-size: 24px;
+}
+
+.chart {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+  padding: 20px;
+  max-width: 1440px;
+  margin-top: 120px;
+}
+
+.image-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: rgb(254, 254, 252);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  border-color: black;
+  box-sizing: 2px;
+}
+
+.image-item p {
+  font-family: "Bookman Old Style";
+  margin: 10px;
+  bottom: 10px;
+  font-size: 24px;
+  color: rgb(255, 0, 0);
+}
+
+.image-item p::first-letter {
+  color: blue;
+  font-size: 40px; /* Adjust the color you want for the first letter */
+}
+
+.image-item img {
+  display: block;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.image-item:hover {
+  transform: scale(1.1);
+}
+
+:root {
+  /* fonts */
+  --font-impact: Impact;
+  --font-bookman-old-style: "Bookman Old Style";
+
+  /* Colors */
+}
+
+@media (max-width: 800px) {
+  .text {
+    font-size: 24px;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    scale: 80%;
+    left: 10px;
+  }
+  .text {
+    font-size: 13px;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+  }
+
+  .ec-text {
+    font-size: 12px;
+  }
+
+  .p {
+    font-size: 16px;
+  }
+}
