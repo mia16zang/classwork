@@ -1,0 +1,15 @@
+.divA {
+  background-color: aqua;
+  width: 500px;
+  height: 100px;
+  display: none;
+  margin: 20px;
+}
+
+.divB {
+  background-color: rgb(136, 255, 0);
+  width: 500px;
+  height: 100px;
+  display: none;
+  margin: 20px;
+}
