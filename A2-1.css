@@ -137,6 +137,30 @@ body {
   z-index: 100;
 }
 
+.footer {
+  background-image: linear-gradient(
+    to right,
+    yellow,
+    rgb(255, 105, 25),
+    yellow,
+    rgb(255, 105, 25)
+  );
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.footer a {
+  text-decoration: none;
+  font-size: 48px;
+  color: #ed4c07;
+  -webkit-text-stroke: 1px black;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
 :root {
   /* fonts */
   --font-impact: Impact;
@@ -165,13 +189,24 @@ body {
   }
 }
 
-@media (max-width: 600px) {
-  .logo {
-    scale: 80%;
-    left: 10px;
+@media (max-width: 700px) {
+  .header {
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
   }
+
+  .logo {
+    scale: 60%;
+    left: 10px;
+    margin-bottom: 0px;
+  }
+
   .text {
-    font-size: 13px;
+    font-size: 12px;
+    margin-top: 0px;
     -webkit-text-stroke: 1px rgb(0, 0, 0);
   }
 
@@ -196,14 +231,21 @@ body {
   }
 
   .letter {
-    font-size: 64px;
-    padding: 2px 8px;
+    font-size: 52px;
+    padding: 10px;
     position: absolute;
     bottom: 0;
-    right: 0;
-    transform: translate(
-      -80%,
-      -40%
-    ); /* Move the letter to the desired position */
+    right: -10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translate(-80%, -40%);
+  }
+
+  .footer a {
+    font-size: 28px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 }
