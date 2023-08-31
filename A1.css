@@ -28,6 +28,10 @@
   margin: 10px;
 }
 
+#stroke-color {
+  margin: 10px;
+}
+
 #input {
   z-index: 99;
   padding: 20px;
