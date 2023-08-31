@@ -1,0 +1,215 @@
+/* CSS RESETS */
+/* ----------------------------------------------------- */
+
+*   {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html    {
+    margin: 0;
+    padding: 0;
+}
+
+body    {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+img {
+    display: block; 
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 100;
+    font-weight: normal;
+
+}
+
+ul, ol, li {
+    padding: 0;
+    margin: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+
+/* CSS VARIABLES */
+/* ----------------------------------------------------- */
+
+:root {
+    --bgcol: rgb(250,250,250);
+    --pad1: 20px;
+    
+}
+
+/* OVERALL */
+/* ----------------------------------------------------- */
+
+html {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+body {
+    padding: var(--pad1);    
+    background-color: var(--bgcol);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    
+}
+
+header {
+    position: fixed;
+    left: var(--pad1);
+    font-size: 1rem;
+    padding-bottom: var(--pad1);
+}
+
+
+/* DIV.CONTENT-WRAP, MAIN & ASIDE */
+/* ----------------------------------------------------- */
+
+
+div.content-wrap {
+    display: flex;
+    gap: calc(2 * var(--pad1));
+    justify-content: center;
+    align-items: flex-start;    
+}
+
+main, aside {
+    padding: var(--pad1);
+    background-color: white;    
+}
+
+main {
+    width: 45%;
+    margin-left: 5%;   
+    padding-bottom: calc(2 * var(--pad1));
+}
+aside {
+    width: 15%;
+    position: sticky;
+    top: var(--pad1);    
+}
+
+
+figure > img {
+    margin-bottom: 10px;
+}
+figure {
+    margin-bottom: var(--pad1);
+}
+
+
+
+/* ASIDE > NAV */
+/* ----------------------------------------------------- */
+
+nav > a {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+nav ul {
+    padding-left: 1.2em;    
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.2s;
+    list-style: none;
+}
+nav ul li:last-of-type {
+    margin-bottom: 15px;
+}
+
+nav > a.sectiontitle:hover,
+a.opened {
+    background-color: black;
+    color: white;
+}
+
+
+/* FOR #CURRENTPAGE & #CURRENTSECTION VARIABLES */
+/* ----------------------------------------------------- */
+
+a#currentsection {
+    background-color: ;
+}
+
+a#currentpage {
+    position: relative;
+}
+
+a#currentpage::before {
+    content: "\00BB";
+    position: absolute;
+    left: -1em;
+}
+
+
+/* GENERAL TEXT */
+/* ----------------------------------------------------- */
+
+p.s {
+    font-size: 0.85rem;
+}
+
+/* FOOTER */
+/* ----------------------------------------------------- */
+
+footer {
+    border-top: 1px solid lightgray;
+    margin-top: calc(2 * var(--pad1));
+}
+
+
+/* RESPONSIVE VIEWS */
+/* ----------------------------------------------------- */
+
+@media(max-width: 1200px) {
+    header {
+        position: static;
+        margin-left: 5%;
+    }
+    div.content-wrap {
+        gap: var(--pad1);
+    }
+    main {
+        width: 75%;
+        margin-left: 5%;
+    }
+    aside {
+        width: 25%;
+        margin-right: 2%; 
+    }
+}
+
+@media(max-width: 650px) {
+    header {
+        margin-left: 0;
+    }
+    div.content-wrap {
+        display: block;
+    }
+    main {
+        width: 100%;
+        margin-left: 0;
+    }
+    aside {
+        width: 100%;
+        margin-right: 0;
+        margin-top: var(--pad1);        
+    }
+}
+

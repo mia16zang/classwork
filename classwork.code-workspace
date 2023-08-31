@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "../D4.A1_gm_message_maker/D4.A1_gm_message_maker"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "classwork"
+  }
+}
