@@ -42,9 +42,9 @@
         <!-- Markup for your inputs and controls go inside this section -->
         <label for="imageSelect">Choose Image</label>
         <select name="dropdown" id="imageSelect" onchange="choosePic()">
-          <option value="images\flowers.jpeg">Flowers</option>
-          <option value="images\still-life.jpeg">Still-Life</option>
-          <option value="images\sunrise.jpeg">Sunrise</option>
+          <option value="images\flowers.jpg">Flowers</option>
+          <option value="images\still-life.jpg">Still-Life</option>
+          <option value="images\sunrise.jpg">Sunrise</option>
         </select>
         <br />
         <label for="primary-title">Primary Title:</label>
@@ -106,8 +106,22 @@
           id="text-stroke"
           name="text-stroke"
           min="0"
-          step="100"
+          step="1"
         />
+
+        <label for="stroke-color">Stroke Color:</label>
+        <select id="stroke-color" name="stroke-color">
+          <option value="black">Black</option>
+          <option value="red">Red</option>
+          <option value="yellow">Yellow</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+          <option value="white">White</option>
+          <option value="cyan">Cyan</option>
+          <option value="pink">Pink</option>
+          <option value="purple">Purple</option>
+        </select>
+        <br />
       </section>
 
       <!-- Button to Save Image | DO NOT EDIT THIS -->

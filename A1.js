@@ -1,21 +1,25 @@
+//choose image for canvas
 function choosePic() {
   let choice = document.getElementById("imageSelect").value;
   let imageChoice = document.getElementById("canvas-image");
   imageChoice.src = choice;
 }
 
+// Function to update Primary title
 function primaryTitle() {
   let primaryTitle = document.getElementById("primary-title").value;
   let text1Element = document.getElementById("text-1");
   text1Element.textContent = primaryTitle;
 }
 
+// Function to update Secondary title
 function updateSecondaryTitle() {
   const secondaryTitle = document.getElementById("secondary-title").value;
   const text2Element = document.getElementById("text-2");
   text2Element.textContent = secondaryTitle;
 }
 
+// Function to update the font family
 function updateFontFamily() {
   const fontFamily = document.querySelector(
     'input[name="font-family"]:checked'
@@ -28,6 +32,7 @@ function updateFontFamily() {
   text2Element.style.fontFamily = fontFamily;
 }
 
+//change font colour
 function updateFontColor() {
   const fontColor = document.getElementById("font-color").value;
 
@@ -38,6 +43,7 @@ function updateFontColor() {
   text2Element.style.color = fontColor;
 }
 
+// Function to update the font size
 function updateFontSize() {
   const fontSize = document.getElementById("font-size").value + "px";
 
@@ -48,14 +54,28 @@ function updateFontSize() {
   text2Element.style.fontSize = fontSize;
 }
 
-function updateTextStroke() {
-  const textStroke = document.getElementById("text-stroke").value;
+//change stroke size
+function adjuststroke() {
+  textsin = document.getElementById("text-stroke").value;
+  tostroke = document.getElementById("text-1");
+  tostroke2 = document.getElementById("text-2");
+  tostroke.style.webkitTextStrokeWidth = textsin + "px";
+  tostroke2.style.webkitTextStrokeWidth = textsin + "px";
+}
 
-  const text1Element = document.getElementById("text-1");
-  text1Element.style.fontWeight = textStroke;
+//change stroke color
+function updateStrokeColor() {
+  const strokeColorSelect = document.getElementById("stroke-color");
+  const selectedStrokeColor = strokeColorSelect.value;
 
-  const text2Element = document.getElementById("text-2");
-  text2Element.style.fontWeight = textStroke;
+  const text1 = document.getElementById("text-1");
+  const text2 = document.getElementById("text-2");
+
+  text1.style.webkitTextStrokeColor = selectedStrokeColor;
+  text2.style.webkitTextStrokeColor = selectedStrokeColor;
+
+  text1.style.textStrokeColor = selectedStrokeColor;
+  text2.style.textStrokeColor = selectedStrokeColor;
 }
 
 // Attach event listeners to input elements
@@ -72,14 +92,15 @@ document
   .getElementById("font-color")
   .addEventListener("change", updateFontColor);
 document.getElementById("font-size").addEventListener("input", updateFontSize);
+document.getElementById("text-stroke").addEventListener("change", adjuststroke);
 document
-  .getElementById("text-stroke")
-  .addEventListener("input", updateTextStroke);
+  .getElementById("stroke-color")
+  .addEventListener("change", updateStrokeColor);
 
 // Initial update
+choosePic();
 primaryTitle();
 updateSecondaryTitle();
 updateFontFamily();
 updateFontColor();
 updateFontSize();
-updateTextStroke();
