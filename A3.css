@@ -166,6 +166,15 @@ header {
 
 .tagline {
   align-self: center;
+  display: flex;
+  flex-direction: row;
+  color: var(--font-color);
+}
+
+.tagline i {
+  margin-left: 20px;
+  align-self: center;
+  font-size: 30px;
   color: var(--font-color);
 }
 

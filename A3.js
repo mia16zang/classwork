@@ -17,10 +17,6 @@ editableTitle.addEventListener("input", () => {
   localStorage.setItem("userTitle", newTitle);
 });
 
-//Customizable elements
-
-//theme color change
-
 //MAIN
 
 //editable title for list title saving in localstorage
