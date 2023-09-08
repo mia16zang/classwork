@@ -241,7 +241,7 @@ header {
 }
 
 .listCard > #selectedMoviesList > div > p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .listCard > #selectedMoviesList > div > button {
@@ -291,7 +291,7 @@ header {
 }
 
 .listCard > #selectedSongsList > div > p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .listCard > #selectedSongsList > div > button {
@@ -347,7 +347,7 @@ header {
 }
 
 .listCard > #selectedBooksList > div > p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .listCard > #selectedBooksList > div > button {
