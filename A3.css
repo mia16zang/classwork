@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   margin: 0px;
 }
@@ -532,3 +533,535 @@ header {
   align-self: center;
   margin-left: 20px;
 }
+=======
+body {
+  margin: 0px;
+}
+
+/* Header content */
+
+header {
+  background-color: var(--header-color);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--font-color);
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+  margin: 0 10px;
+}
+
+.logo > img {
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-self: center;
+}
+
+.title h2 {
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.title i {
+  color: var(--font-color);
+  margin-right: 10px;
+}
+
+.customize {
+  justify-self: flex-end;
+  margin: 0 10px;
+}
+
+.themeColorChange {
+  border-radius: 40px;
+  height: 50px;
+  width: 50px;
+  background: var(--theme-color);
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.colorOptions {
+  display: none;
+  width: 100px;
+  right: 10px;
+  top: 50px;
+  position: absolute;
+  z-index: 80;
+  display: none;
+}
+
+.themeColorChange:hover .colorOptions {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.gradientOption {
+  color: #000;
+  height: 40px;
+  width: 100px;
+  background-color: white;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+#gradientOption1:hover {
+  color: rgba(240, 248, 255, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 20, 42, 1),
+    rgba(38, 1, 39, 1),
+    rgba(25, 0, 6, 1)
+  );
+}
+
+#gradientOption2:hover {
+  color: rgba(240, 248, 255, 0);
+  background: linear-gradient(
+    90deg,
+    rgb(69, 60, 103),
+    rgb(109, 103, 228),
+    rgb(70, 194, 203)
+  );
+}
+
+/* Main body */
+.main {
+  width: 100%;
+  flex-grow: 1;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-dark {
+  --header-color: rgb(0, 0, 0);
+  --theme-color: linear-gradient(
+    rgb(0, 29, 63) 0%,
+    rgb(66, 2, 69) 51%,
+    rgb(52, 0, 12) 100%
+  );
+  --theme-color: linear-gradient(
+    rgb(0, 29, 63) 0%,
+    rgb(66, 2, 69) 51%,
+    rgb(52, 0, 12) 100%
+  );
+  --card-color: rgb(129, 129, 129, 0.4);
+  --font-color: rgba(255, 255, 255, 1);
+  --search-color: rgba(181, 181, 181, 0.495);
+  --popup-color: rgb(0, 29, 63);
+  --popup-hover: rgb(66, 2, 69);
+  --card-hover: rgba(189, 189, 189, 0.4);
+  --scroll-thumb: rgba(206, 206, 206, 0.414);
+}
+
+.theme-light {
+  --header-color: rgba(120, 100, 200, 1);
+
+  --bg-color: linear-gradient(
+    0deg,
+    rgb(69, 60, 103),
+    rgb(109, 103, 228),
+    rgb(70, 194, 203)
+  );
+  --theme-color: linear-gradient(
+    0deg,
+    rgb(69, 60, 103),
+    rgb(109, 103, 228),
+    rgb(70, 194, 203)
+  );
+  --card-color: rgba(224, 224, 224, 0.611);
+  --font-color: rgba(0, 0, 0, 1);
+  --search-color: rgba(0, 0, 0, 0.699);
+  --popup-color: rgb(70, 194, 203);
+  --popup-hover: rgb(219, 219, 219);
+  --card-hover: rgba(126, 126, 126, 0.521);
+  --scroll-thumb: rgba(226, 226, 226, 0.641);
+}
+
+.tagline {
+  align-self: center;
+  color: var(--font-color);
+}
+
+.listCards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.listCards::-webkit-scrollbar {
+  background-color: rgba(154, 154, 154, 0);
+  width: 15px;
+  padding: 0px 2px;
+  margin: 0px 2px;
+}
+
+.listCards::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb);
+  border-radius: 10px;
+}
+
+.listCard {
+  width: 20%;
+  height: 95%;
+  background-color: var(--card-color);
+  border-radius: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 5px;
+}
+
+/*Movies list card styling */
+.listCard > #selectedMoviesList {
+  overflow-y: auto;
+}
+
+.listCard > #selectedMoviesList::-webkit-scrollbar {
+  background-color: rgba(154, 154, 154, 0);
+  width: 15px;
+  padding: 0px 2px;
+  margin: 0px 2px;
+}
+
+.listCard > #selectedMoviesList::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb);
+  border-radius: 10px;
+}
+
+.listCard > #selectedMoviesList > div {
+  display: flex;
+  flex-direction: row;
+  padding: 5px 10px;
+  border-bottom: 1px solid rgba(228, 228, 228, 0.51);
+  justify-content: space-between;
+  align-items: center;
+  color: var(--font-color);
+}
+
+.listCard > #selectedMoviesList > div:last-of-type {
+  border-bottom: none;
+}
+
+.listCard > #selectedMoviesList > div:hover {
+  background-color: var(--card-hover);
+}
+
+.listCard > #selectedMoviesList > div > img {
+  margin-right: 20px;
+}
+
+.listCard > #selectedMoviesList > div > p {
+  font-size: 20px;
+}
+
+.listCard > #selectedMoviesList > div > button {
+  background-color: #ffffff00;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.listCard > #selectedMoviesList > div > button > i {
+  color: var(--font-color);
+}
+
+/*Songs list card styling */
+.listCard > #selectedSongsList {
+  overflow-y: auto;
+}
+
+.listCard > #selectedSongsList::-webkit-scrollbar {
+  background-color: rgba(154, 154, 154, 0);
+  width: 15px;
+  padding: 0px 2px;
+  margin: 0px 2px;
+}
+
+.listCard > #selectedSongsList::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb);
+  border-radius: 10px;
+}
+
+.listCard > #selectedSongsList > div {
+  display: flex;
+  flex-direction: row;
+  padding: 5px 10px;
+  border-bottom: 1px solid rgba(228, 228, 228, 0.51);
+  justify-content: space-between;
+  align-items: center;
+  color: var(--font-color);
+}
+
+.listCard > #selectedSongsList > div:last-of-type {
+  border-bottom: none;
+}
+
+.listCard > #selectedSongsList > div > img {
+  margin-right: 20px;
+}
+
+.listCard > #selectedSongsList > div > p {
+  font-size: 20px;
+}
+
+.listCard > #selectedSongsList > div > button {
+  background-color: #ffffff00;
+  border: none;
+  color: var(--font-color);
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.listCard > #selectedSongsList > div:hover {
+  background-color: var(--card-hover);
+}
+
+/*Books list card styling */
+.listCard > #selectedBooksList {
+  overflow-y: auto;
+}
+
+.listCard > #selectedBooksList > div:hover {
+  background-color: var(--card-hover);
+}
+
+.listCard > #selectedBooksList::-webkit-scrollbar {
+  background-color: rgba(154, 154, 154, 0);
+  width: 15px;
+  padding: 0px 2px;
+  margin: 0px 2px;
+}
+
+.listCard > #selectedBooksList::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb);
+  border-radius: 10px;
+}
+
+.listCard > #selectedBooksList > div {
+  display: flex;
+  flex-direction: row;
+  padding: 5px 10px;
+  border-bottom: 1px solid rgba(228, 228, 228, 0.51);
+  justify-content: space-between;
+  align-items: center;
+  color: var(--font-color);
+}
+
+.listCard > #selectedBooksList > div:last-of-type {
+  border-bottom: none;
+}
+
+.listCard > #selectedBooksList > div > img {
+  left: 5px;
+  margin-right: 20px;
+}
+
+.listCard > #selectedBooksList > div > p {
+  font-size: 20px;
+}
+
+.listCard > #selectedBooksList > div > button {
+  background-color: #ffffff00;
+  border: none;
+  color: var(--font-color);
+  cursor: pointer;
+  margin-left: auto;
+}
+
+@media (max-width: 1200px) {
+  .listCard {
+    width: 25%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .listCard {
+    width: 30%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .listCards {
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+  }
+  .listCard {
+    width: 70%;
+  }
+}
+
+@media (max-width: 500px) {
+  .listCards {
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+  }
+  .listCard {
+    width: 90%;
+  }
+}
+
+.titleContainer {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  padding: 0 10px;
+}
+
+.titlePart {
+  color: var(--font-color);
+  font-size: 18px !important;
+  font-weight: bold !important;
+  width: 80%;
+  margin: 5px 0;
+  height: 20px;
+}
+
+.addButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  padding-bottom: 10px;
+}
+
+.addButton i {
+  font-size: 40px;
+}
+
+.searchBar {
+  width: 100%;
+  height: 88%;
+  background-color: var(--search-color);
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  top: 80px;
+}
+
+/* search bar and search button */
+.searchComponents {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--popup-color);
+  border-radius: 40px;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  background-color: var(--popup-color);
+  padding: 6px 0;
+}
+
+.closeButton {
+  background: var(--popup-color);
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  color: #fff; /* Close button color */
+  font-size: large;
+  top: 30px; /* Adjust this value to control the vertical position */
+  left: 20%;
+  padding: 4px 8px;
+}
+
+.closeButton:focus {
+  outline: none; /* Remove focus outline */
+}
+
+.searchBar input {
+  width: 50%;
+  height: 40px;
+  border-radius: 40px;
+  border: none;
+  padding: 0 20px;
+}
+
+.searchButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 10px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.popupMenu {
+  background-color: var(--popup-color);
+  color: var(--font-color);
+  border-radius: 10px;
+  padding: 20px;
+  display: none;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+}
+
+.popupMenu::-webkit-scrollbar {
+  background-color: rgba(154, 154, 154, 0);
+  width: 15px;
+  padding: 0px 2px;
+  margin: 0px 2px;
+}
+
+.popupMenu::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb);
+  border-radius: 10px;
+}
+
+.popupMenu div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.popupMenu div:hover {
+  background-color: var(--popup-hover);
+}
+
+.popupMenu > div > img {
+  align-self: flex-start;
+  margin: 5px;
+}
+
+.popupMenu > div > p {
+  align-self: center;
+  margin-left: 20px;
+}
+>>>>>>> 3e08c40ae663f7e2834908758fc07941e5d9cc4d
