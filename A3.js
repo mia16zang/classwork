@@ -29,8 +29,8 @@ const listCards = document.querySelectorAll(".listCard");
 // Define an array of default titles for each list
 const defaultTitles = [
   "Name your WatchList",
-  "Name your Reading List",
   "Name your PlayList",
+  "Name your Reading List",
 ];
 
 listCards.forEach((listCard, index) => {

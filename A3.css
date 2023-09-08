@@ -26,7 +26,20 @@ header {
 }
 
 .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   justify-self: center;
+}
+
+.title h2 {
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.title i {
+  color: var(--font-color);
+  margin-right: 10px;
 }
 
 .customize {
@@ -58,15 +71,21 @@ header {
 }
 
 .themeColorChange:hover .colorOptions {
-  display: block;
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
 }
 
 .gradientOption {
   color: #000;
   height: 40px;
+  width: 100px;
   background-color: white;
   border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
 }
 
 #gradientOption1:hover {
@@ -218,13 +237,18 @@ header {
 }
 
 .listCard > #selectedMoviesList > div > img {
-  left: 5px;
+  margin-right: 20px;
+}
+
+.listCard > #selectedMoviesList > div > p {
+  font-size: 20px;
 }
 
 .listCard > #selectedMoviesList > div > button {
   background-color: #ffffff00;
   border: none;
   cursor: pointer;
+  margin-left: auto;
 }
 
 .listCard > #selectedMoviesList > div > button > i {
@@ -263,7 +287,11 @@ header {
 }
 
 .listCard > #selectedSongsList > div > img {
-  left: 5px;
+  margin-right: 20px;
+}
+
+.listCard > #selectedSongsList > div > p {
+  font-size: 20px;
 }
 
 .listCard > #selectedSongsList > div > button {
@@ -271,11 +299,20 @@ header {
   border: none;
   color: var(--font-color);
   cursor: pointer;
+  margin-left: auto;
+}
+
+.listCard > #selectedSongsList > div:hover {
+  background-color: var(--card-hover);
 }
 
 /*Books list card styling */
 .listCard > #selectedBooksList {
   overflow-y: auto;
+}
+
+.listCard > #selectedBooksList > div:hover {
+  background-color: var(--card-hover);
 }
 
 .listCard > #selectedBooksList::-webkit-scrollbar {
@@ -306,6 +343,11 @@ header {
 
 .listCard > #selectedBooksList > div > img {
   left: 5px;
+  margin-right: 20px;
+}
+
+.listCard > #selectedBooksList > div > p {
+  font-size: 20px;
 }
 
 .listCard > #selectedBooksList > div > button {
@@ -313,6 +355,7 @@ header {
   border: none;
   color: var(--font-color);
   cursor: pointer;
+  margin-left: auto;
 }
 
 @media (max-width: 1200px) {
@@ -410,7 +453,8 @@ header {
 }
 
 .closeButton {
-  background: none;
+  background: var(--popup-color);
+  border-radius: 100%;
   border: none;
   cursor: pointer;
   position: absolute;
@@ -418,6 +462,7 @@ header {
   font-size: large;
   top: 30px; /* Adjust this value to control the vertical position */
   left: 20%;
+  padding: 4px 8px;
 }
 
 .closeButton:focus {
@@ -429,7 +474,7 @@ header {
   height: 40px;
   border-radius: 40px;
   border: none;
-  padding-left: 20px;
+  padding: 0 20px;
 }
 
 .searchButton {
