@@ -118,7 +118,6 @@ gradientOption4.addEventListener("click", () => {
   setTheme("theme-pastel"); // Set the theme when gradientOption2 is clicked
 });
 
-// Add an event listener to each "Add" button
 // JavaScript code
 
 // Function to open the search bar
