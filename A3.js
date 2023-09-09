@@ -3,6 +3,23 @@
 //Editable Title
 
 //editable title for header code saving in localstorage
+// Function to enforce character limit on content-editable elements
+function enforceCharacterLimit(event) {
+  const element = event.target;
+  const text = element.textContent;
+
+  if (text.length > maxCharacters) {
+    // Truncate the text to the maximum character limit
+    element.textContent = text.slice(0, maxCharacters);
+  }
+}
+
+// Maximum character limit
+const maxCharacters = 20;
+
+//Header
+
+// Editable Title
 const editableTitle = document.getElementById("editableTitle");
 
 // Retrieve the stored title from local storage
@@ -17,52 +34,10 @@ editableTitle.addEventListener("input", () => {
   localStorage.setItem("userTitle", newTitle);
 });
 
-//MAIN
+// Attach the character limit enforcement to the editableTitle element
+editableTitle.addEventListener("input", enforceCharacterLimit);
 
-//editable title for list title saving in localstorage
-const listCards = document.querySelectorAll(".listCard");
-
-// Define an array of default titles for each list
-const defaultTitles = [
-  "Name your WatchList",
-  "Name your PlayList",
-  "Name your Reading List",
-];
-
-listCards.forEach((listCard, index) => {
-  const titlePart = listCard.querySelector(".titlePart");
-  const listTitleId = `listTitle${index + 1}`;
-
-  // Retrieve the stored title from local storage based on the listTitleId
-  const storedTitlePart = localStorage.getItem(listTitleId);
-
-  if (storedTitlePart) {
-    titlePart.textContent = storedTitlePart;
-  } else {
-    // Set the default title based on the index
-    titlePart.textContent = defaultTitles[index];
-  }
-
-  // Listen for input changes and store the updated title in local storage
-  titlePart.addEventListener("input", () => {
-    const newListTitle = titlePart.textContent;
-    localStorage.setItem(listTitleId, newListTitle);
-  });
-});
-
-// Maximum character limit
-const maxCharacters = 20;
-
-// Function to enforce character limit on content-editable elements
-function enforceCharacterLimit(event) {
-  const element = event.target;
-  const text = element.textContent;
-
-  if (text.length > maxCharacters) {
-    // Truncate the text to the maximum character limit
-    element.textContent = text.slice(0, maxCharacters);
-  }
-}
+// MAIN
 
 //Theme Color Change
 // Retrieve the theme from local storage
@@ -89,7 +64,7 @@ function updateBackground(themeName) {
   const main = document.querySelector(".main");
   const themeColorChange = document.querySelector(".themeColorChange");
 
-  // Define the background colors for your themes here
+  // Define the background colors for themes here
   const themes = {
     "theme-dark": {
       mainBackground:
@@ -103,6 +78,18 @@ function updateBackground(themeName) {
       themeColorChangeBackground:
         "linear-gradient(0deg,rgb(69, 60, 103), rgb(109, 103, 228), rgb(70, 194, 203))",
     },
+    "theme-warm": {
+      mainBackground:
+        "linear-gradient(0deg, rgb(255, 102, 102), rgb(255, 204, 102), rgb(255, 153, 102))",
+      themeColorChangeBackground:
+        "linear-gradient(0deg, rgb(255, 102, 102), rgb(255, 204, 102), rgb(255, 153, 102))",
+    },
+    "theme-pastel": {
+      mainBackground:
+        "linear-gradient(0deg, rgb(255, 189, 136), rgb(136, 255, 221), rgb(218, 136, 255))",
+      themeColorChangeBackground:
+        "linear-gradient(0deg, rgb(255, 189, 136), rgb(136, 255, 221), rgb(218, 136, 255))",
+    },
   };
 
   // Set the background colors based on the selected theme
@@ -114,6 +101,8 @@ function updateBackground(themeName) {
 // Add event listeners to gradientOption elements
 const gradientOption1 = document.getElementById("gradientOption1");
 const gradientOption2 = document.getElementById("gradientOption2");
+const gradientOption3 = document.getElementById("gradientOption3");
+const gradientOption4 = document.getElementById("gradientOption4");
 
 gradientOption1.addEventListener("click", () => {
   setTheme("theme-dark"); // Set the theme when gradientOption1 is clicked
@@ -121,6 +110,12 @@ gradientOption1.addEventListener("click", () => {
 
 gradientOption2.addEventListener("click", () => {
   setTheme("theme-light"); // Set the theme when gradientOption2 is clicked
+});
+gradientOption3.addEventListener("click", () => {
+  setTheme("theme-warm"); // Set the theme when gradientOption2 is clicked
+});
+gradientOption4.addEventListener("click", () => {
+  setTheme("theme-pastel"); // Set the theme when gradientOption2 is clicked
 });
 
 // Add an event listener to each "Add" button
@@ -315,11 +310,25 @@ function updateSelectedMoviesUI() {
   });
 }
 
+//confirmation message for added content
+function confirmMovieAdded(movieTitle) {
+  const popupMessage = document.getElementById("popupMessage1");
+  popupMessage.textContent = `${movieTitle} has been added to your watchlist. Enjoy!`;
+  console.log("movie added");
+  popupMessage.style.opacity = "1";
+  popupMessage.style.display = "block";
+
+  setTimeout(() => {
+    popupMessage.style.display = "none";
+    popupMessage.style.opacity = "0";
+  }, 2000);
+}
+
 // Function to add a selected movie to the array
 function addSelectedMovie(movie) {
   selectedMovies.push(movie);
   updateSelectedMoviesUI();
-  console.log("movie added");
+  confirmMovieAdded(movie["#TITLE"]);
 }
 
 function removeSelectedMovie(index) {
@@ -339,12 +348,6 @@ function loadSelectedMoviesFromLocalStorage() {
     selectedMovies = JSON.parse(selectedMoviesData);
     updateSelectedMoviesUI();
   }
-}
-
-// Function to close the movie details popup
-function closeMovieDetailsPopup() {
-  const popup = document.getElementById("movieDetailsPopup");
-  popup.style.display = "none";
 }
 
 //Songs API
@@ -493,7 +496,7 @@ function updateSelectedSongsUI() {
 function addSelectedSong(song) {
   selectedSongs.push(song);
   updateSelectedSongsUI();
-  console.log("song added");
+  confirmSongAdded(song.data.name);
 }
 
 function removeSelectedSong(index) {
@@ -503,6 +506,19 @@ function removeSelectedSong(index) {
   }
 
   localStorage.setItem("selectedSongs", JSON.stringify(selectedSongs));
+}
+
+//confirmation message for added content
+function confirmSongAdded(songTitle) {
+  const popupMessage = document.getElementById("popupMessage2");
+  popupMessage.textContent = `${songTitle} has been added to your playlist. Enjoy!`;
+  popupMessage.style.opacity = "1";
+  popupMessage.style.display = "block";
+
+  setTimeout(() => {
+    popupMessage.style.display = "none";
+    popupMessage.style.opacity = "0";
+  }, 2000);
 }
 
 //function to load selectedMovies from local storage
@@ -646,7 +662,7 @@ function updateSelectedBooksUI() {
 function addSelectedBook(book) {
   selectedBooks.push(book);
   updateSelectedBooksUI();
-  console.log("Book added");
+  confirmBookAdded(book.name);
 }
 
 function removeSelectedBook(index) {
@@ -656,6 +672,24 @@ function removeSelectedBook(index) {
   }
 
   localStorage.setItem("selectedBooks", JSON.stringify(selectedBooks));
+}
+
+//confirmation message for books added
+function confirmBookAdded(bookTitle) {
+  const popupMessage = document.getElementById("popupMessage3");
+  const message = `${bookTitle} has been added to your collection. Enjoy reading!`;
+
+  // Set the message content
+  popupMessage.textContent = message;
+
+  // Make the message visible
+  popupMessage.style.opacity = "1";
+  popupMessage.style.display = "block";
+
+  setTimeout(() => {
+    popupMessage.style.display = "none";
+    popupMessage.style.opacity = "0";
+  }, 2000);
 }
 
 // Function to load selected books from local storage
@@ -679,3 +713,41 @@ function initializePage() {
 
 // Call the initializePage function when the page loads
 window.addEventListener("load", initializePage);
+
+//To save lists as images
+// Function to capture a screenshot of a specific list
+function captureAndDownloadList(listId) {
+  const listContainer = document.getElementById(listId);
+
+  // Scroll to the bottom of the list to ensure all content is visible
+  listContainer.scrollTop = listContainer.scrollHeight;
+
+  html2canvas(listContainer).then((canvas) => {
+    // Convert the canvas to a data URL representing a PNG image
+    const imageDataURL = canvas.toDataURL("image/png");
+
+    // Create a download link for the image
+    const downloadLink = document.createElement("a");
+    downloadLink.href = imageDataURL;
+    downloadLink.download = `${listId}_screenshot.png`; // Specify a filename
+
+    // Simulate a click on the download link
+    downloadLink.click();
+  });
+}
+
+const downloadButton1 = document.getElementById("downloadbutton1");
+const downloadButton2 = document.getElementById("downloadbutton2");
+const downloadButton3 = document.getElementById("downloadbutton3");
+
+downloadButton1.addEventListener("click", () => {
+  captureAndDownloadList("movieList");
+});
+
+downloadButton2.addEventListener("click", () => {
+  captureAndDownloadList("songList");
+});
+
+downloadButton3.addEventListener("click", () => {
+  captureAndDownloadList("bookList");
+});

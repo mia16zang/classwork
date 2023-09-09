@@ -2,7 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+    <meta name="author" content="Expanded Metrics">
+    <meta name="description" content="Explore a world of entertainment and creativity with our website. Discover a curated collection of movies, music, books, and more. Create your personalized lists, share your favorites, and connect with like-minded enthusiasts. Start your journey into the world of entertainment today!">
+    <meta property="og:title" content="ListHub"/>
+    <meta property="og:description" content="Explore a world of entertainment and creativity with our website. Discover a curated collection of movies, music, books, and more. Create your personalized lists, share your favorites, and connect with like-minded enthusiasts. Start your journey into the world of entertainment today!"/>  
+    <meta name="keywords" content="Movies, Music, Books, Entertainment, Lists, Personalized, Favorites, Watchlist, Playlist, Reading List, Song Collection, Movie Buff, Music Lover, Bookworm, Pop Culture, Recommendations, Community">
+
+    <meta property="og:type" content="website"/>
     <title>ListHub</title>
     <link rel="stylesheet" href="A3.css" />
     <link
@@ -10,6 +17,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+
+
 
   </head>
   <body>
@@ -25,10 +37,16 @@
         <div class="themeColorChange" id="themeColorChange">
           <div class="colorOptions">
             <div class="gradientOption" id="gradientOption1">
-              <option value="dark">Dark</option>
+              <option value="dark">Midnight</option>
             </div>
             <div class="gradientOption" id="gradientOption2">
-              <option value="light">Light</option>
+              <option value="light">Cool</option>
+            </div>
+            <div class="gradientOption" id="gradientOption3">
+              <option value="warm">Autumn</option>
+            </div>
+            <div class="gradientOption" id="gradientOption4">
+              <option value="pastel">Rainbow</option>
             </div>
           </div>
         </div>
@@ -42,14 +60,16 @@
         <i class="fa-solid fa-pen-to-square"></i>
       </div>
       <div class="listCards">
+
         <!--Movie list card-->
-        <div class="listCard" id="movieList">
+        <div class="listCard" id="movieList" >
           <div class="titleContainer">
-            <div class="titlePart" contenteditable="true">
+            <div class="titlePart">
               <h3 id="listTitle1">Add your Movies</h3>
             </div>
+            <button class="downloadbutton" id="downloadbutton1" data-list="1"><i class="fa-solid fa-file-arrow-down"></i></button>
             <button class="addButton" id="addButton1">
-              <i class="fa-regular fa-plus" style="color: #fcfcfc"></i>
+              <i class="fa-regular fa-plus"></i>
             </button>
           </div>
           <div id="selectedMoviesList"></div>
@@ -58,34 +78,41 @@
         <!--Song list card-->
         <div class="listCard" id="songList">
           <div class="titleContainer">
-            <div class="titlePart" contenteditable="true">
-              <h3 id="listTitle2">Name Your List</h3>
+            <div class="titlePart">
+              <h3 id="listTitle2">Add your Songs</h3>
             </div>
+            <button class="downloadbutton" id="downloadbutton2"  data-list="2"><i class="fa-solid fa-file-arrow-down"></i></button>
             <button class="addButton" id="addButton2">
-              <i class="fa-regular fa-plus" style="color: #ffffff"></i>
+              <i class="fa-regular fa-plus"></i>
             </button>
           </div>
           <div id="selectedSongsList"></div>
         </div>
 
         <!--Book list card-->
-        <div class="listCard" id="bookList">
+        <div class="listCard" id="bookList" >
           <div class="titleContainer">
-            <div class="titlePart" contenteditable="true">
-              <h3 id="listTitle3">Name Your List</h3>
+            <div class="titlePart">
+              <h3 id="listTitle3">Add your Books</h3>
             </div>
+            <button class="downloadbutton" id="downloadbutton3" data-list="3"><i class="fa-solid fa-file-arrow-down"></i></button>
             <button class="addButton" id="addButton3">
-              <i class="fa-regular fa-plus" style="color: #ffffff"></i>
+              <i class="fa-regular fa-plus"></i>
             </button>
           </div>
           <div id="selectedBooksList"></div>
         </div>
       </div>
+
+
       <!-- Search Bars -->
     </div>
 
     <!--Search Bar 1-->
     <div class="searchBar" id="searchBar1">
+      <!--popup message-->
+      <div class="popupMessage" id="popupMessage1"></div>
+      <!--Search bar-->
       <div class="searchComponents">
         <button class="closeButton" id="closeButton1">
           <i class="fa-solid fa-xmark"></i>
@@ -97,8 +124,12 @@
       </div>
       <div id="popupMenu1" class="popupMenu"></div>
     </div>
+
     <!--Search Bar 2-->
     <div class="searchBar" id="searchBar2">
+      <!--popup message-->
+      <div class="popupMessage" id="popupMessage2"></div>
+      <!--Search bar-->
       <div class="searchComponents">
         <button class="closeButton" id="closeButton2">
           <i class="fa-solid fa-xmark"></i>
@@ -113,6 +144,9 @@
 
     <!--Search Bar 3-->
     <div class="searchBar" id="searchBar3">
+      <!--popup message-->
+      <div class="popupMessage" id="popupMessage3"></div>
+      <!--Search bar-->
       <div class="searchComponents">
         <button class="closeButton" id="closeButton3">
           <i class="fa-solid fa-xmark"></i>
@@ -126,8 +160,10 @@
     </div>
     
     </div>
-    
 
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
     <script src="A3.js"></script>
   </body>
 </html>
