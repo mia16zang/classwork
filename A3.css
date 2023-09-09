@@ -36,7 +36,6 @@ header {
 
 .title {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   justify-self: center;
 }
@@ -44,12 +43,6 @@ header {
 .title h2 {
   margin-right: 20px;
   text-decoration: none;
-}
-
-@media (max-width: 600px) {
-  .title h2 {
-    font-size: 20px !important;
-  }
 }
 
 .customize {
@@ -68,6 +61,34 @@ header {
   align-items: center;
   position: relative;
   cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .title h2 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 400px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+  }
+
+  .title h2 {
+    font-size: 14px !important;
+  }
+
+  .themeColorChange {
+    height: 40px;
+    width: 40px;
+  }
 }
 
 .colorOptions {
@@ -288,7 +309,7 @@ header {
   border-radius: 10px;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 300px) and (max-width: 600px) {
   .listCards::-webkit-scrollbar {
     width: 10px;
   }
@@ -495,6 +516,7 @@ header {
   }
   .listCard {
     width: 85%;
+    height: 85%;
   }
 
   .listCard > #selectedMoviesList::-webkit-scrollbar {
@@ -678,28 +700,6 @@ header {
   margin-left: 20px;
 }
 
-@media (max-width: 800px) {
-  .searchBar {
-    height: 88%;
-  }
-
-  .searchComponents {
-    width: 60%;
-  }
-
-  .closeButton {
-    left: 18%;
-  }
-
-  .popupMenu {
-    width: 60%;
-  }
-
-  .popupMenu::-webkit-scrollbar {
-    width: 6px;
-  }
-}
-
 /* message to confirm selection is added to list */
 .popupMessage {
   top: 50%;
@@ -713,4 +713,31 @@ header {
   opacity: 1;
   transition: opacity 2s ease-in-out;
   width: 45%;
+  padding: 20px 20px;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  .searchBar {
+    height: 88%;
+  }
+
+  .searchComponents {
+    width: 70%;
+  }
+
+  .closeButton {
+    left: 11%;
+  }
+
+  .popupMenu {
+    width: 70%;
+  }
+
+  .popupMenu::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .popupMessage {
+    width: 70%;
+  }
 }
