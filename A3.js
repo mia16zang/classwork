@@ -1,41 +1,22 @@
-//Header
-
-//Editable Title
-
-//editable title for header code saving in localstorage
-// Function to enforce character limit on content-editable elements
-function enforceCharacterLimit(event) {
-  const element = event.target;
-  const text = element.textContent;
-
-  if (text.length > maxCharacters) {
-    // Truncate the text to the maximum character limit
-    element.textContent = text.slice(0, maxCharacters);
-  }
-}
-
-// Maximum character limit
-const maxCharacters = 20;
-
-//Header
-
 // Editable Title
 const editableTitle = document.getElementById("editableTitle");
 
-// Retrieve the stored title from local storage
+// Function to update and store the title in local storage
+function updateAndStoreTitle() {
+  const newTitle = editableTitle.textContent;
+
+  // Store the updated title in local storage
+  localStorage.setItem("userTitle", newTitle);
+}
+
+// Retrieve the stored title from local storage (if available)
 const storedTitle = localStorage.getItem("userTitle");
 if (storedTitle) {
   editableTitle.textContent = storedTitle;
 }
 
-// Listen for input changes and store the updated title in local storage
-editableTitle.addEventListener("input", () => {
-  const newTitle = editableTitle.textContent;
-  localStorage.setItem("userTitle", newTitle);
-});
-
-// Attach the character limit enforcement to the editableTitle element
-editableTitle.addEventListener("input", enforceCharacterLimit);
+// Listen for input changes and update the title in local storage
+editableTitle.addEventListener("input", updateAndStoreTitle);
 
 // MAIN
 

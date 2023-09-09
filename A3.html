@@ -56,11 +56,13 @@
     <!-- Main Content -->
     <div class="main">
       <div class="tagline">
-        <h1 contenteditable="true" id="editableTitle">Set a Name</h1>
+        <h1 contenteditable="true" id="editableTitle" onkeypress="return (this.innerText.length <= 20)">Set a Name</h1>
+
         <i class="fa-solid fa-pen-to-square"></i>
       </div>
-      <div class="listCards">
 
+      <!--List Cards-->
+      <div class="listCards">
         <!--Movie list card-->
         <div class="listCard" id="movieList" >
           <div class="titleContainer">

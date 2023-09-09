@@ -257,6 +257,16 @@ header {
   color: var(--font-color);
 }
 
+@media (max-width: 800px) {
+  .tagline {
+    font-size: 12px;
+  }
+
+  .tagline i {
+    font-size: 22px;
+  }
+}
+
 .listCards {
   width: 100%;
   height: 100%;
